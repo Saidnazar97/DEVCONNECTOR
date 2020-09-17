@@ -17,7 +17,8 @@ const ProfileSchema = new mongoose.Schema({
     },
     status: {
       type: String,
-      required: true
+        enum: ['Pending', 'In Progress', 'Cancelled', 'Done'],
+        default: 'Pending'
     },
     skills: {
       type: [String],
@@ -107,4 +108,4 @@ const ProfileSchema = new mongoose.Schema({
     }
 });
 
-module.exports = Profile = mongoose.model(`profile`, ProfileSchema);
+module.exports = mongoose.model(`profile`, ProfileSchema);
