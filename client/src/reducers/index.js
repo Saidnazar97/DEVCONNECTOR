@@ -3,7 +3,7 @@ import {
 } from 'redux';
 import alert from './alert';
 import auth from './auth';
-import profile from './profile';
+import profile from './pofile';
 import post from './post';
 
 export default combineReducers({
